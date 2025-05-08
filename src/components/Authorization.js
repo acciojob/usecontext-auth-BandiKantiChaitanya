@@ -10,9 +10,9 @@ function Authorization() {
     <div>
         <h1>Click on the checkbox to get authenticated</h1>
         {
-            auth ? (<p>You are now authenticated,you can proceed</p>)
+            auth ? (<p className='authText' >You are now authenticated,you can proceed</p>)
             :(
-                <p>You are not authenticated</p>
+                <p className='authText' >you are not authenticated</p>
             )
         }
         <input type="checkbox" onChange={handleAuth}   />
