@@ -1,11 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
+import AuthContext from "./AuthContext";
+import Authorization from "./Authorization";
+
 
 const App = () => {
+  let [auth,setAuth]=useState(false)
   return (
     <div>
-        {/* Do not remove the main div */}
+        <AuthContext.Provider value={[auth,setAuth]} >
+          <Authorization/>
+        </AuthContext.Provider>
     </div>
   )
 }
